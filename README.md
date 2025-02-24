@@ -1,6 +1,6 @@
 # AI Chatbot Application
 
-このプロジェクトは、OpenAIのAPIを使用した生成AIチャットボットアプリケーションです。ユーザーは自然言語、画像、音声の3つのモードでチャットボットと対話できます。
+このプロジェクトは、OpenAI の API を使用した生成 AI チャットボットアプリケーションです。ユーザーは自然言語、画像、音声の 3 つのモードでチャットボットと対話できます。
 
 ## プロジェクト構成
 
@@ -22,25 +22,20 @@ ai-chatbot-app
 ## セットアップ
 
 1. リポジトリをクローンします。
+
    ```
    git clone <repository-url>
    cd ai-chatbot-app
    ```
 
-2. 必要な依存関係をインストールします。
+2. docker で起動
+
    ```
-   pip install -r requirements.txt
+   docker build -t ai-chatbot .
+   docker run -d -p 8501:8501 --name ai-chatbot-app ai-chatbot
    ```
 
-3. OpenAI APIの設定を行います。`src/config/openai_config.py`にAPIキーを追加してください。
-
-## 使用方法
-
-アプリケーションを起動するには、以下のコマンドを実行します。
-
-```
-streamlit run src/app.py
-```
+3. OpenAI API の設定を行います。`src/models/.env を新規作成して API キーを追加してください。
 
 ## モードの説明
 

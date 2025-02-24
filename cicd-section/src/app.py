@@ -8,7 +8,6 @@ import threading
 
 app = Flask(__name__)
 
-
 def main():
     st.title("AI Chatbot Application")
 
@@ -64,7 +63,6 @@ def main():
         if st.session_state.conversation_history:
             for message in st.session_state.conversation_history:
                 st.write(message)
-
 
 if __name__ == "__main__":
     main()
