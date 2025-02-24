@@ -1,0 +1,15 @@
+streamlit
+openai==0.28
+Pillow
+SpeechRecognition
+pydub
+numpy
+opencv-python
+requests
+python-dotenv
+flask
+websockets
+soundfile
+pyaudio
+SpeechRecognition
+elasticsearch
