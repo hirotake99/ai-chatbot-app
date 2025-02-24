@@ -1,7 +1,13 @@
 def chat_with_bot(user_input, conversation_history):
     import openai
     import os
-    from config.openai_config import OPENAI_API_KEY
+    from dotenv import load_dotenv
+
+    # 現在のスクリプトと同じディレクトリにある .env ファイルのパスを取得
+    env_path = os.path.join(os.path.dirname(__file__), '.env')
+
+    # .env ファイルから環境変数をロード
+    load_dotenv(dotenv_path=env_path)
 
     # openai.api_key = OPENAI_API_KEY
     openai.api_key = os.getenv('OPENAI_API_KEY')

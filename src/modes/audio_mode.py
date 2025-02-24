@@ -1,18 +1,19 @@
 import asyncio
 import websockets
 import pyaudio
-import numpy as np
 import base64
 import json
-import wave
-import io
 import os
 import streamlit as st
-import speech_recognition as sr
+from dotenv import load_dotenv
+
+# 現在のスクリプトと同じディレクトリにある .env ファイルのパスを取得
+env_path = os.path.join(os.path.dirname(__file__), '.env')
+
+# .env ファイルから環境変数をロード
+load_dotenv(dotenv_path=env_path)
 
 API_KEY = os.getenv('OPENAI_API_KEY')
-#わからない人は、上の行をコメントアウトして、下記のように直接API KEYを書き下してもよい
-#API_KEY = "sk-xxxxx"
 
 # WebSocket URLとヘッダー情報
 WS_URL = "wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17"

@@ -19,6 +19,12 @@ def encode_image(image):
 def process_image_and_query(image, query):
     import openai
     import os
+    from dotenv import load_dotenv
+
+    # 現在のスクリプトと同じディレクトリにある .env ファイルのパスを取得
+    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    # .env ファイルから環境変数をロード
+    load_dotenv(dotenv_path=env_path)
 
     openai.api_key = os.getenv('OPENAI_API_KEY')
 

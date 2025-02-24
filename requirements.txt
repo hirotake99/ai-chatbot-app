@@ -13,3 +13,4 @@ soundfile
 pyaudio
 SpeechRecognition
 elasticsearch
+janome
